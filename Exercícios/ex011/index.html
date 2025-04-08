@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <P>Tente abrir esse site em vários dispositivos diferentes, ou simplesmente aumente e diminua o tamanho do seu navegador</P>
+
+    <picture>
+        <source media="(min-width: 750px)" srcset="Imagens/foto_p.png" type="image/png">
+        <source media="(min-width: 1050px)" srcset="Imagens/foto_m.png" type="image/png">
+        <img src="Imagens/foto_g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudios</h1>
+    <p>Vamos aprender a reproduzir audios em HTML5</p>
+    <audio preload="metadata" controls>
+        <source src="mídia/hentai.MP3" type="audio/mpeg">
+        <source src="mídia/hentai.ogg" type="audio/ogg">
+        <source src="mídia/hentai.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="mídia/hentai.MP3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+</body>
+</html>
