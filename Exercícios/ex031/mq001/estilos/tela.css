@@ -18,6 +18,9 @@ header{
 
 header > h1{
     text-align: center;
+    padding: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 menu ul{
@@ -38,3 +41,4 @@ article{
     display: block;
     margin: auto;
 }
+
