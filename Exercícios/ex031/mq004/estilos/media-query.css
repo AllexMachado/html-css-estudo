@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* ALL */
+
+/* Highlight de estudo: Typical Device Brakpoints 
+
+(Do prof Guanabara -
+Pequenas Telas: até 600px
+Celular: de 600px à 768px
+Tablet: de 768px à 992px
+Desktop: de 992px à 1200px
+Grandes Telas: acima de 1200px)
+
+(Da minha pesquisa -
+Pequenas Telas: de 600px pra baixo
+Celular: de 360px pra baixo
+Tablet: de 768px pra cima
+Telas Médias: de 768px pra cima
+Desktop: de 1366px pra cima
+Grandes Telas: de 992px pra cima
+Telas EXTRA Grandes: de 1200px pra cima
+
+resumo de main:
+Mobile: tudo que for de 360px pra baixo
+Tablet: entre 768px e outros
+Desktop: tudo que for acima de 1366px)
+
+*/
+
+@media print {
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
+}
