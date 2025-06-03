@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propriedade Flex</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div#cxA {
+            flex: 1 0 200px;
+        }
+
+        div#cxB {
+            flex: 1 1 150px;
+        }
+
+        div#cxC {
+            flex: 1 8 auto;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    A propriedade Flex, se aplica somente aos flex-items. A W3C comenta que é bom evitar usar o flex-basis, flex-grow e flex-shrink de forma individual o tempo todo, pois o flex sozinho já consegue fazer uma configuração unica para os items, como um shorthand.
+
+    Por exemplo:
+        Invés de escrever -
+        flex-basis: 150px;
+        flex-grow: 0;
+        flex-shrink: 1;
+
+        Basta escrever -
+        flex: 0 1 150px
+
+    O flex sempre começa pelo grow, depois pelo shrink e por fim o basis.
+
+    Outras propriedades do flex e suas simplificações são:
+        (padrão)"flex: 0 1 auto;" 
+        (padrão)"flex: initial;"
+
+        "flex: 0 0 auto;" torna os elementos não flexíveis.
+        "flex: none;" torna os elementos não flexíveis.
+
+        "flex: 1 1 auto;" torna os elementos no máximo de flexíveis.
+        "flex: auto;" torna os elementos no máximo de flexíveis.
+
+        flex: 1/ 2/ 3/ e etc, também podem significar o valor para grow, e o resto em suas expecificações padrões.
+        Que nesse caso seria:
+            flex: 3 1 auto;
+
+    Na prática fica:
+    -->
+
+    <div class="conteiner">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+</body>
+</html>

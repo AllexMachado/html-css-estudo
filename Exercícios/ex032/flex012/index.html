@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow e Flex Shrink</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            flex-flow: row nowrap;
+
+            background-color: lightsalmon;
+        }
+
+        div.conteiner > div {
+            height: 300px;
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+
+        div#A {
+            flex-basis: 150px;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        div#B {
+            flex-basis: 150px;
+            flex-grow: 2;
+            flex-shrink: 0;
+        }
+
+        div#C {
+            flex-basis: 150px;
+            flex-grow: 1;
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Para controlar os items de forma flexível, é possível usar os:
+        "flex-shrink" que configura o tanto que o elemento pode encolher.
+        "flex-grow" que configura o tanto que o elemento pode crescer.
+    Por padrão eles são:
+        "flex-shrink: 1;" = Sim, o elemento pode encolher.
+        "flex-grow: 0;" = Não, o elemento não pode crescer.
+
+    Quando o shrink não está habilitado, os items quebram no conteiner causando um overflow.
+
+    Além do valores 0 e 1 no shrink e grow, também há mais valores. Exemplo:
+        Você tem 3 conteiners, um com o grow no 0, o outro no 1, e o outro no 2.
+        Isso significa que o conteiner que possue o número 2 no grow, vai crescer o dobro do do elemento que está com o número 1.
+        
+        Não pense que vai funcionar caso você tenha 3 conteiners na ordem: 0, 2, 2. Nesse caso os conteiners com o número 2, vão crescer igualmente, nem maior, nem menor que seu chará.
+    Isso significa que os valores se calculam de acordo com a proporção dos números colocados.
+
+    Na prática fica:
+    -->
+
+    <div class="conteiner">
+        <div id="A">A</div>
+        <div id="B">B</div>
+        <div id="C">C</div>
+    </div>
+</body>
+</html>
