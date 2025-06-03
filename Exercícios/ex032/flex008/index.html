@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento do Conteúdo Wrap</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+
+            height: 400px;
+            background-color: lightsalmon;
+        }
+
+        div.item {
+            padding: 40px;
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Aqui vamos saber como "align-content" alinha os elementos no eixo transversal (cross-axis) porém somente quando eles estão empacotados com "wrap".
+
+    E isso é o que o diferencia do "align-items" e do "justify-content".
+
+    As configurações do "align-content" são as seguintes:
+        (padrão)"align-content: stretch;" que pega a dimensão inteira do flex-direction e divide pelo número de linhas/colunas e depois estica somente na dimensão em que está os elementos com o cross-axis amplificado.
+        "align-content: flex-start;" aqui ele pega todos os elementos e redireciona eles para o início do cross-axis, deixando aquele famoso espaço em branco somente no final do cross-axis.
+        "align-content: flex-end;" faz o mesmo que o flex-start mas na direção oposta, neste caso no final do cross-axis.
+        "align-content: center;" que centraliza os items no centro do cross-axis, deixando o espaço em branco dividido entre o cross-start e o cross-end.
+        "align-content: space-between;" funciona como o space-between do justify-content também, com o espaço vazio separando os elemntos e os empurrando para a cross-start e o cross-end.
+        "align-content: space-evelyn;" distribui os elementos com uma gap entre eles, centralizando-os.
+        "align-content: space-around;" semelhante ao stretch, ele divide as áreas demarcadas, porém sem esticar os elementos, apenas centralizando eles dentro da dimensão que dividiu.
+
+    Na prática funciona assim:
+    -->
+
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+</body>
+</html>
