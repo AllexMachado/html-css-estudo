@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo flex-basis</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            flex-flow: row nowrap;
+
+            background-color: lightsalmon;
+        }
+
+        div.item {
+            flex-basis: 150px;
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    O flex-basis por padrão sempre vem em "auto", isso significa que o tamanho do elemento no eixo principal é ditado pelo tamanho do seu conteúdo. Ele sempre vai aumentar a largura dos items de acordo com seu conteúdo.
+
+    O "flex-basis" pode ser usado com parâmetros também como por ex:
+        flex-basis: 200px;
+        Nesse caso o tamanho do conteúdo vai ser estentido a 200px.
+    
+    Porém não necessáriamento cada box vai ter 200px, o flex-basis vai apenas definir os 200px da box "o quanto der", então a box vai ter 200px dependendo do tamanho do conteiner pai. Geralmente vai quebrar o conteúdo dentro das items, e caso diminua o conteiner pai em um nível que não é suportado mais a quantidade definida no flex-basis, então o conteúdo vai quebrar de qualquer forma.
+    
+    Na prática fica:
+    -->
+
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">Outro conteúdo</div>
+        <div class="item">C</div>
+        <div class="item">Conteúdo um pouco maior</div>
+        <div class="item">E</div>
+        <div class="item">Conteúdo maior ainda, que vai ocupar mais espaço</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
