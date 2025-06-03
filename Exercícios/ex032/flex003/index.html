@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap e Flow nas Flexboxes</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            /* 
+            Por padrão o navegador está sempre com o:
+                flex-direction: row;
+                flex-wrap: nowrap;
+            */
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            background-color: lightsalmon;
+        }
+
+        div.item {
+
+            padding: 10px;
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        flex-wrap: Flex wrap define como os items vão se comportar. Por padrão ele vem como "flex-wrap: nowrap;" que significa que ele não vai "quebrar" o conteúdo das caixas. 
+        
+        Normalmente quando o tamanho de uma box é encolhido, ela tende a "amassar" o conteúdo, obviamente dependendo muito do conteúdo que existe dentro da box/item. Mas quando a configuração do flex-wrap está "flex-wrap: wrap;" e o main conteiner é encolhido, ele tende a quebrar o conteúdo para baixo (no caso, no sentido do cross-axis).
+
+        Quando é usado o "flex-wrap: wrap-reverse;" ele vai quebrar o conteúdo, porém no sentido do eixo transversal. Ou seja, para cima. Aqui está as direções para onde o conteúdo quebra, dependendo do flex-direction dele:
+            flex-direction/row: esquerda em baixo
+            flex-direction/row-reverse: direita em baixo
+            flex-direction/column: direita em cima
+            flex-direction/column-reverse: direita em baixo
+
+            Usando agora o Wrap-reverse -
+            flex-direction/row: esquerda em cima
+            flex-direction/row-reverse: direita em cima
+            flex-direction/column: esquerda em cima
+            flex-direction/column-reverse: esquerda em cima
+
+        Sempre seguindo no sentido do eixo transversal (main-axis).
+
+        A baixo está as configurações aplicadas na prática.
+    -->
+    <div class="conteiner">
+        <div class="item">Exemplo de Bloco A</div>
+        <div class="item">Exemplo de Bloco B</div>
+        <div class="item">Exemplo de Bloco C</div>
+        <div class="item">Exemplo de Bloco D</div>
+        <div class="item">Exemplo de Bloco E</div>
+        <div class="item">Exemplo de Bloco F</div>
+        <div class="item">Exemplo de Bloco G</div>
+    </div>
+</body>
+</html>

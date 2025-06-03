@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento nos Eixos das Flexboxes</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            /* 
+            Os valores padrões que aprendemos até aqui são:
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+            */
+            justify-content: space-around;
+            flex-flow: row wrap;
+
+            background-color: lightsalmon;
+        }
+
+        div.item {
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    Uma forma de organizar os conteúdos das flexboxes, é usando o:
+            "justify-content:"
+    Que organiza os conteúdos dependendo do eixo da main-axis, sendo eles:
+        "justify-content: flex-start;" que mantém todo conteúdo no início da main-start.
+        "justify-content: flex-end;" que mantém todo conteúdo no final da main-end.
+    Importante lembrar que tudo isso depende do flow-direction que você vai usar.
+
+    Outros "justify-content;" também são:
+        "justify-content: center;" que mantém o conteúdo centralizado, no meio do main-axis.
+        "justify-content: space-between;" que corrige o espaçamento dos conteúdos de forma igual. Então eles teram o mesmo espaço dentro do conteiner.
+            Outros spaces dos justify são:
+            "justify-content: space-evenly;" faz com que os espaçamento de antes e depois dos itens sejam iguais. Criando uma espécie de gap em todos os items dentro do conteiner.
+            "justify-content: space-around;" pega o espaço útil do conteiner e divide eles em vários espaços iguais e centraliza todos. Funciona como uma margin lateral dos items, centralizando eles ainda mais que o space-evenly dentro do conteiner pai.
+        lEMBRANDO que tudo é centralizado de acordo com o flow-direction definido. Sempre seguindo a direção da main-axis. Tornando o espaçamento vertical ou horizontal dependendo de cada direction.
+
+
+        Na prática fica mais ou menos assim:
+    -->
+
+    <div class="conteiner">
+        <div class="item">Exemplo de Bloco A</div>
+        <div class="item">Exemplo de Bloco B</div>
+        <div class="item">Exemplo de Bloco C</div>
+        <div class="item">Exemplo de Bloco D</div>
+        <div class="item">Exemplo de Bloco E</div>
+        <div class="item">Exemplo de Bloco F</div>
+        <div class="item">Exemplo de Bloco G</div>
+    </div>
+</body>
+</html>

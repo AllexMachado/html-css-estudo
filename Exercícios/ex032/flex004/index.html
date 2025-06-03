@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap e Flow nas Flexboxes</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            flex-flow: row wrap;
+
+            background-color: lightsalmon;
+        }
+
+        div.item {
+            flex: auto;
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    Existe uma forma de juntar o flex-direction + flex-wrap = flex-flow
+    O flex-flow é uma shorthand, podendo ser usada como:
+        flex-flow: row nowrap;
+    -->
+
+    <div class="conteiner">
+        <div class="item">Exemplo de Bloco A</div>
+        <div class="item">Exemplo de Bloco B</div>
+        <div class="item">Exemplo de Bloco C</div>
+        <div class="item">Exemplo de Bloco D</div>
+        <div class="item">Exemplo de Bloco E</div>
+        <div class="item">Exemplo de Bloco F</div>
+        <div class="item">Exemplo de Bloco G</div>
+    </div>
+</body>
+</html>

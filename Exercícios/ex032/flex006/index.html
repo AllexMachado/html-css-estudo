@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento nos Eixos das Flexboxes</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            /* 
+            Os valores padrões que aprendemos até aqui são:
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: stretch;
+            */
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+
+            height: 300px;
+            background-color: lightsalmon;
+        }
+
+        div.item {
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    Usando o align-items, que assim como o nome diz, alinha os items do conteiner pai. Diferente do justify-content, que segue o flex-direction usando como base a main-axis, no align items é seguido o flex-direction da cross-axis.
+
+    Os align-items são:
+        "align-items: stretch;" que estica o conteúdo dos items usando a direção do cross-axis.
+        "align-items: flex-start;" que gruda o conteúdo sempre no início do eixo transversal (cross-axis), deixando um espaço em branco em baixo (que é facilmente corrigido com o justify-content) e também pode ser usaod em várias ocasiões.
+        "align-items: flex-end;" que faz o mesmo que o flex-start, mas agora grudando os conteúdos no fim do eixo transversal (cross-axis).
+        "align-items: center;" que assim como o flex-start e o flex-end, usa o meio do eixo transversal (cross-axis) para centralizar o conteúdo dos items.
+
+    Na prática fica assim:
+    -->
+
+    <div class="conteiner">
+        <div class="item">Exemplo de Bloco A</div>
+        <div class="item">Exemplo de Bloco B</div>
+        <div class="item">Exemplo de Bloco C</div>
+        <div class="item">Exemplo de Bloco D</div>
+        <div class="item">Exemplo de Bloco E</div>
+        <div class="item">Exemplo de Bloco F</div>
+        <div class="item">Exemplo de Bloco G</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direções e Eixos das Flexboxes</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            flex-direction: row;
+
+            background-color: lightsalmon;
+        }
+
+        div.item {
+
+            padding: 10px;
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Flex-direction: usa row (como se fosse uma coluna) da esquerda para direita para definir a direção horizontal das flexible boxes.
+            Flex-direction: row-reverse - usa o row de forma contrária, ou seja da direita para esquerda.
+            Flex-direction: column - agora levando as rows (realmente como colunas) porem de forma vertical, de cima para baixo.
+            Flex-direction: column-reverse - da mesma forma que o column normal, porém de baixo para cima.
+
+        Quando são feitas as flex-direction, nelas são usadas os Eixos(axis), sendo o primeiro deles o main-axis para definir o eixo principal. Nele começa-se com o main-start e se termina com o main-end, sempre seguindo da esquerda para direita. O segundo Eixo criado é o cross-axis. Nele se começa com o cross-start e termina com o cross-end, sendo de cima para baixo.
+
+        Eixos já são conhecidos como os famosos X, Y e Z. Agora com suas próprias denominações feitas com intuito de serem usadas no CSS. É importante lembrar que o main-axis e o cross-axis são configurados de acordo com as configurações do flex-direction, que leva como base o idioma do site. Em muitos países a leitura natural é feita da esquerda para direita, em outros a leitura é feita da direita para esquerda. Tudo isso pode sim influenciar o flex-direction, assim como suas main-axis e cross-axis.
+
+        A baixo está as configurações aplicadas na prática.
+    -->
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
