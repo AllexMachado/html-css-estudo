@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia do align-self</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
+            height: 400px;
+
+            background-color: lightsalmon;
+        }
+
+        div.item {
+            padding: 20px;
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+
+        div#i2 {
+                align-self: auto;
+                /* Herdou a propriedade "align-items" do pai
+
+                Também pode ser usado o align-self: inherit; que é a mesma coisa. */
+        }
+        
+        div#i3 {
+            align-self: flex-end;
+        }
+
+        div#i5 {
+            align-self: center;
+        }
+
+        div#i6 {
+            align-self: flex-start;
+        }
+
+        div#i7 {
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    align-self, se aplica a cada um dos items, onde eles podem ter um alinhamento diferente. Ele se aplica somente os itens e na flex-direction do cross-axis (eixo transversa)
+
+    Os cinco valores disponíveis no align-self são:
+        "align-self: auto;" ele vai herdar a característica de alinhamento principal do conteiner pai, seja o align-content ou o align-item.
+        "align-self: flex-start;", "align-self: flex-end;" e "align-self: center;" funcionam como todos os outros aligns, onde usam o alinhamento do flex-direction como base para alinhar o objeto, sendo ele no cross-axis ou na main-axis.
+        "align-self: stretch;" que estica o item para ocupar o espaço inteiro do eixo usado.
+
+    Importante lembrar que o align-self server apenas para items, e não para os conteiners pai.
+
+    Na prática fica:
+    -->
+
+    <div class="conteiner">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+</body>
+</html>

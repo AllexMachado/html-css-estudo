@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento dos Items</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            flex-flow: row wrap;
+
+            background-color: lightsalmon;
+        }
+
+        div.item {
+            padding: 20px;
+
+            text-align: center;
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+
+        div#i1 {
+            order: 0;
+        }
+
+        div#i2 {
+            order: -2;
+        }
+        
+        div#i3 {
+            order: 4;
+        }
+
+        div#i4 {
+            order: 8;
+        }
+
+        div#i5 {
+            order: 2;
+        }
+
+        div#i6 {
+            order: 0;
+        }
+
+        div#i7 {
+            order: -4;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Agora conversando mais sobre a customização fora dos conteiners pai, e sim sobre sobre os items, conteiners filhos. 
+
+    A primeira propriedade a se aprender é o order. Todo o elemento que está dentro do conteiner pai, tem uma ordem, e todas são por padrão o 0. Você pode sim alterar a ordem dos conteúdos, o CSS deixa por padrão a ordem de forma crescente, dos negativos até os mais altos e positivos. Ex:
+        -1, 0, 1, 2, 3, 4, 5, e por aí vai.
+
+        Caso você ordene seus conteiners na seguinte ordem:
+            4, 0, 0, 9
+        Eles serão ordenanos no CSS da seguinte forma:
+            0, 0, 4, 9
+        Nesse caso deixando o 0 que foi configurado primeiro como o primeiro da ordem do HTML.
+
+    Na prática fica:
+    -->
+
+    <div class="conteiner">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+</body>
+</html>
